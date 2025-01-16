@@ -3,8 +3,11 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const authRoutes = require("./routes/authRoutes");
 const cookieParser = require ("cookie-parser");
-
+const dotenv = require("dotenv");
 const app = express();
+
+//ENV setup
+dotenv.config();
 
 //Middleware
 app.use(morgan("dev"));
