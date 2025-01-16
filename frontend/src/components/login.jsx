@@ -32,9 +32,9 @@ const Login = () => {
     // Logic to send credentials to the backend (placeholder for backend integration)
     try {
       // Simulate a login attempt
-      const response = await fetch("/api/login", {
+      const response = await fetch("http://localhost:3500/sign_up", {
         method: "POST",
-        headers: {
+        headers: { 
           "Content-Type": "application/json",
         },
         body: JSON.stringify(credentials),
@@ -63,15 +63,15 @@ const Login = () => {
 
       <h2>Log In</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="username">
+        <label htmlFor="Fullname">
           <b>Username</b>
         </label>
         <input
           type="text"
-          placeholder="Enter Username"
-          name="username"
-          id="username"
-          value={credentials.username}
+          placeholder="Enter email"
+          name="email"
+          id="email"
+          value={credentials.fullname}
           onChange={handleInputChange}
           required
         />

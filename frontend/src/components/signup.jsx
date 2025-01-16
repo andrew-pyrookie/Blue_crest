@@ -70,15 +70,28 @@ const Signup = () => {
 
       <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="username">
-          <b>Username</b>
+        <label htmlFor="Fullname">
+          <b>Fullname</b>
         </label>
         <input
           type="text"
-          placeholder="Enter Username"
-          name="username"
-          id="username"
-          value={credentials.username}
+          placeholder="Enter Fullname"
+          name="fullname"
+          id="fullname"
+          value={credentials.fullname}
+          onChange={handleInputChange}
+          required
+        />
+
+<label htmlFor="email">
+          <b>Email</b>
+        </label>
+        <input
+          type="text"
+          placeholder="email"
+          name="email"
+          id="email"
+          value={credentials.email}
           onChange={handleInputChange}
           required
         />
