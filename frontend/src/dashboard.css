@@ -1,0 +1,221 @@
+body {
+    background-color: whitesmoke;
+    margin: 0; /* Ensures no extra margins are added */
+    padding: 10px; /* Resets padding */
+    overflow-x: hidden; /* Prevents horizontal overflow */
+  }
+  
+  html {
+    width: 100%;
+    overflow-x: hidden; /* Ensures no horizontal scrolling */
+  }
+  /* dashboard.css or a new CSS file */
+.bg-grid-small {
+    background-image: url('path-to-your-grid-image.svg');
+    background-repeat: repeat;
+    background-size: contain;
+  }
+  
+  
+
+.dashboard {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .portfolio {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .portfolio h2{
+    font-size: 15px;
+    margin: 0;
+    color: black;
+  }
+  .portfolio h3{
+    font-size: 15px;
+    margin: 0;
+    color: #333;
+
+  }
+ .portfolio-word{
+  display: flex;
+  flex-direction: row; /* Ensure items are in a row */
+  gap: 10px; /* Spacing between items */
+  margin-top: 30px;
+  align-items: center;
+}
+
+
+.toggle-button {
+  background-color: #fff;
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 18px;
+  cursor: pointer;
+  padding:5px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  outline: none; /* Remove focus outline */
+  box-shadow: none; /* Remove any shadow */
+  color: gray;
+}
+
+.toggle-button:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: none; /* Remove shadow when focused */
+  color: grey;
+}
+
+.toggle-button:active {
+  outline: none; /* Remove focus outline when active */
+  box-shadow: none; /* Remove shadow when clicked */
+}
+
+  
+  .graph-container {
+    margin: 20px 0;
+  }
+  
+  .watchlist {
+    margin-top: 20px;
+  }
+  
+  .coin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(225, 235, 235);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .coin-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .coin-name{
+    coloR: BLACK;
+  }
+
+  .coin-nameUSD{
+    color: black;
+    font-size: 17px;
+  }
+
+  .coin-nameKES{
+    Color: grey;
+    font-size: 13px;
+  }
+
+
+  .coin-prices {
+    display: flex;
+    flex-direction: column;  /* Keeps the items stacked vertically */
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+  }
+  
+  .coin-nameUSD, .coin-nameKES {
+    margin: 0px;  /* Optional: adjust the space between the two elements */
+  }
+  
+  
+  .coin-details img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .status {
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+   height: 20px;
+   display: flex;
+  
+  }
+  
+  .status.pump {
+    background-color: #16c784;
+  }
+  
+  .status.dump {
+    background-color: #f6465d;
+  }
+
+.info{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    gap: 10px;
+   
+}
+
+  
+
+
+
+  .graph-container {
+    background-color: whitesmoke;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 30px 0;
+    border-bottom: white;
+  }
+  
+  .dropdown {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .dropdown label {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  .dropdown select {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+    color: black;
+  }
+  
+  .dropdown select:focus {
+    border-color: #4caf50;
+    outline: none;
+  }
+  
+  .graph-container canvas {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .graph-container {
+      padding: 15px;
+    }
+  
+    .dropdown label,
+    .dropdown select {
+      font-size: 14px;
+    }
+  }
+  
