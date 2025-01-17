@@ -4,7 +4,8 @@ import { VscEyeClosed } from "react-icons/vsc";
 
 const Signup = () => {
   const [credentials, setCredentials] = useState({
-    username: "",
+    fullname: "",
+    email: "",
     password: "",
     confirmPassword: "",
   });
@@ -23,7 +24,7 @@ const Signup = () => {
     e.preventDefault();
 
     // Frontend validations
-    if (!credentials.username || !credentials.password || !credentials.confirmPassword) {
+    if (!credentials.fullname || !credentials.email || !credentials.password || !credentials.confirmPassword) {
       setError("All fields are required.");
       return;
     }
@@ -36,10 +37,10 @@ const Signup = () => {
     // Clear error message
     setError("");
 
-    // Logic to send credentials to the backend (placeholder for backend integration)
+    // Logic to send credentials to the backend
     try {
       // Simulate a signup attempt
-      const response = await fetch("/api/signup", {
+      const response = await fetch("http://localhost:3000/sign_up", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -51,7 +52,8 @@ const Signup = () => {
         const data = await response.json();
         // Logic for successful signup (e.g., redirect to login)
         console.log("Signup successful", data);
-      } else {
+      } 
+      else {
         setError("Something went wrong. Please try again later.");
       }
     } catch (err) {

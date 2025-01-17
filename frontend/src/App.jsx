@@ -9,6 +9,15 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
+          <Route 
+            path="/login" 
+            element={
+              <div>
+                <p>Chunga !!</p>
+              </div>
+            } 
+          />
+
           {/* Route for Login */}
           <Route 
             path="/login" 
